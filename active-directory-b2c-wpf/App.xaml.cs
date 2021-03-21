@@ -29,13 +29,12 @@ namespace active_directory_b2c_wpf
         /// <summary>
         /// Should be one of the choices on the Azure AD B2c / [This App] / Authentication blade
         /// </summary>
-        private static readonly string RedirectUri = "https://localhost";
-        //private static readonly string RedirectUri = "https://teslasuitb2c.b2clogin.com/oauth2/nativeclient";
+        private static readonly string RedirectUri = "https://teslasuitb2c.b2clogin.com/oauth2/nativeclient";
 
         /// <summary>
         /// From Azure AD B2C / UserFlows blade
         /// </summary>
-        public static string PolicySignUpSignIn = "B2C_1_susi_test";
+        public static string PolicySignUpSignIn = "B2C_1_susi";
         public static string PolicyEditProfile = "B2C_1_edit_profile";
         public static string PolicyResetPassword = "B2C_1_reset";
 
