@@ -17,26 +17,27 @@ namespace active_directory_b2c_wpf
         /// <summary>
         /// B2C tenant name
         /// </summary>
-        private static readonly string TenantName = "fabrikamb2c";
+        private static readonly string TenantName = "teslasuitb2c";
         private static readonly string Tenant = $"{TenantName}.onmicrosoft.com";
         private static readonly string AzureAdB2CHostname = $"{TenantName}.b2clogin.com";
 
         /// <summary>
         /// ClientId for the application which initiates the login functionality (this app)  
         /// </summary>
-        private static readonly string ClientId = "841e1190-d73a-450c-9d68-f5cf16b78e81";
+        private static readonly string ClientId = "7d3ce782-f947-47fe-a39b-4239b71fe360";
 
         /// <summary>
         /// Should be one of the choices on the Azure AD B2c / [This App] / Authentication blade
         /// </summary>
-        private static readonly string RedirectUri = "https://fabrikamb2c.b2clogin.com/oauth2/nativeclient";
+        private static readonly string RedirectUri = "https://localhost";
+        //private static readonly string RedirectUri = "https://teslasuitb2c.b2clogin.com/oauth2/nativeclient";
 
         /// <summary>
         /// From Azure AD B2C / UserFlows blade
         /// </summary>
-        public static string PolicySignUpSignIn = "b2c_1_susi";
-        public static string PolicyEditProfile = "b2c_1_edit_profile";
-        public static string PolicyResetPassword = "b2c_1_reset";
+        public static string PolicySignUpSignIn = "B2C_1_susi_test";
+        public static string PolicyEditProfile = "B2C_1_edit_profile";
+        public static string PolicyResetPassword = "B2C_1_reset";
 
         /// <summary>
         /// Note: AcquireTokenInteractive will fail to get the AccessToken if "Admin Consent" has not been granted to this scope.  To achieve this:
@@ -45,12 +46,12 @@ namespace active_directory_b2c_wpf
         /// 2nd: Azure AD B2C / App registrations / [This App] / API Permissions / Add a permission / My APIs / [API App] / Select & Add Permissions
         /// 3rd: Azure AD B2C / App registrations / [This App] / API Permissions / ... (next to add a permission) / Grant Admin Consent for [tenant]
         /// </summary>
-        public static string[] ApiScopes = { "https://fabrikamb2c.onmicrosoft.com/helloapi/demo.read" };
+        public static string[] ApiScopes = { "https://teslasuitb2c.onmicrosoft.com/api/admin", "https://teslasuitb2c.onmicrosoft.com/api/accounts" };
 
         /// <summary>
         /// URL for API which will receive the bearer token corresponding to this authentication
         /// </summary>
-        public static string ApiEndpoint = "https://fabrikamb2chello.azurewebsites.net/hello";
+        public static string ApiEndpoint = "https://test.api.teslasuit.cloud/api";
 
         // Shouldn't need to change these:
         private static string AuthorityBase = $"https://{AzureAdB2CHostname}/tfp/{Tenant}/";
