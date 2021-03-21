@@ -46,7 +46,7 @@ namespace active_directory_b2c_wpf
         /// 2nd: Azure AD B2C / App registrations / [This App] / API Permissions / Add a permission / My APIs / [API App] / Select & Add Permissions
         /// 3rd: Azure AD B2C / App registrations / [This App] / API Permissions / ... (next to add a permission) / Grant Admin Consent for [tenant]
         /// </summary>
-        public static string[] ApiScopes = { "https://teslasuitb2c.onmicrosoft.com/api/admin", "https://teslasuitb2c.onmicrosoft.com/api/accounts" };
+        public static string[] ApiScopes = { "https://teslasuitb2c.onmicrosoft.com/api/admin" };
 
         /// <summary>
         /// URL for API which will receive the bearer token corresponding to this authentication
